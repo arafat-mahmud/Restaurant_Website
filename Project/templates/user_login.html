@@ -1,0 +1,147 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>sign in</title>
+    <style>
+  @media (min-width: 640px) {
+    /* Show the menu links on larger screens */
+    .sm\\:block {
+      display: block;
+    }
+
+    /* Hide the mobile menu button on larger screens */
+    .sm\\:hidden {
+      display: none;
+    }
+}
+    </style>
+    <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body class="bg-[url('{% static 'assets/img/login/bg.jpg' %}')] bg-cover">
+    <header class="container flex-row flex justify-between items-center mx-auto h-14 py-14">
+       
+
+        <nav class="bg-transparent">
+            <div class="container mx-auto flex justify-between items-center">
+              
+             
+          
+              <!-- Mobile menu button (hidden on larger screens) -->
+              <div class="block sm:hidden">
+         <button class="text-white hover:text-gray-400 focus:outline-none">
+
+                   
+
+        <div class="container mx-auto mt-10">
+          <!-- Button to toggle the dropdown -->
+          <button class=" text-white font-bold py-2 px-4 rounded focus:outline-none"
+            id="dropdownBtn">
+            <div class="toggle text-3xl text-white cursor-pointer ml-10"><i class='bx bx-menu' ><box-icon name='menu' ></box-icon></i></div>
+          </div>
+        </button>
+          </button>
+          <div class="mt-2 py-2 bg-white rounded-lg shadow-lg hidden" id="dropdownMenu">
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Option 1</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Option 2</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Option 3</a>
+          </div>
+         </div>
+
+  
+
+
+           </div>
+        
+              <!-- Menu links (hidden on smaller screens) -->
+             <div class="hidden sm:block">
+                <ul class="flex space-x-4">
+                  <li><a href="http://127.0.0.1:8000/" class="text-white hover:text-gray-400 font-bold">Home</a></li>
+                  <!-- <li><a href="#" class="text-white hover:text-gray-400 font-bold">About</a></li>
+                  <li><a href="#" class="text-white hover:text-gray-400 font-bold">Services</a></li>
+                  <li><a href="#" class="text-white hover:text-gray-400 font-bold">Contact</a></li> -->
+                </ul>
+              </div>
+            </div>
+          </nav>
+          
+
+          <!-- search ber -->
+        <!-- <div class="relative flex items-center">
+            <input type="text" placeholder="Search..." class="pr-7 p-3 border-[1px] h-10 bg-transparent outline-none rounded text-white text-white"/>
+            <span class="absolute right-2 text-white font-bold"><button type="submit"><i class='bx bx-search'></i></button></span>
+        </div> -->
+        <!-- close search ber -->
+
+
+    </header>
+
+
+    <section class="container sm:flex flex-col mx-auto flex lg:flex-row justify-between items-center p-16 bg-gray-700 bg-opacity-25 text-white mt-10 rounded">
+        <div class="lg:w-[500px] sm:w-300">
+            <h2 class="text-5xl font-bold">Name</h2>
+            <div class="mt-20">
+                <h1 class="text-3xl font-bold">Welcome!</h1>
+                <h4 class="text-xl font-bold ">To our new Website</h4>
+                <p class="text-gray-300 mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam sint error eos tempore sequi explicabo autem amet, nobis ullam quia, fugiat suscipit vero</p>
+
+                <div class="mt-5 text-3xl">
+                    <i class='bx bxl-facebook-circle mr-2 cursor-pointer' ></i>
+                    <i class='bx bxl-linkedin mr-2 cursor-pointer' ></i>
+                    <i class='bx bxl-twitter mr-2 cursor-pointer' ></i>
+                    <i class='bx bxl-instagram cursor-pointer' ></i>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="lg:w-[500px] bg-gray-900 bg-opacity-40 p-16 rounded  mt-10 w-[400px]">
+            <h3 class="text-3xl font-bold text-center pb-10">Sign in</h3>
+
+             <form action="/as/">
+                <div class="flex flex-row relative items-center">
+                    <input type="text" placeholder="Email" class="w-[100%] h-11 p-2 text-white relative bg-transparent pr-10 outline-none border-b-[1px]">
+                    <span class="absolute right-2 text-2xl"><i class='bx bx-envelope' ></i></span>
+                </div>
+
+                <div  class="flex flex-row relative items-center mt-10">
+                    <input type="text" placeholder="Password" class="w-[100%] h-11 p-2 text-white relative bg-transparent pr-10 outline-none border-b-[1px]">
+                    <span class="absolute right-2 text-2xl"><i class='bx bxs-lock-alt' ></i></span>
+                </div>
+                <div class="flex flex-row justify-between items-center mt-5">
+                    <div>
+                        <input type="checkbox" name="" id="">
+                        <span>Remember me</span>
+                    </div>
+                    <p><a href="">Forget Password?</a></p>
+                </div>
+
+                <!--i need sign in then new page hit-->
+                
+                <input type="submit" value="Sign in" class="w-[100%] p-3 bg-red-500 rounded mt-10 cursor-pointer hover:bg-red-700 ease-in-out duration-300">
+             </form>
+
+            <p class="text-center mt-5 text-gray-300 ">Dont have an account? <a href="/signup/" class="font-bold text-white underline">Sign up</a></p>
+
+            
+        </div>
+
+
+
+        
+    <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    
+
+  
+ </body>
+ </html>
+    
