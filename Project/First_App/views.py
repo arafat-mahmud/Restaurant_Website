@@ -33,6 +33,8 @@ def menulist(request):
 
 def menu_1_student(request):
     return render(request,"menu_1_student.html")
+def menu_2_job(request):
+    return render(request,"menu_2_job.html")
 
 
 
