@@ -31,6 +31,11 @@ def signin(request):
 def menulist(request):
     return render (request,'menu_items.html')
 
+def menu_1_student(request):
+    return render(request,"menu_1_student.html")
+
+
+
 
 
 
