@@ -100,12 +100,13 @@
         <div class="w-[600px] bg-gray-900 bg-opacity-40 p-16 rounded overflow-hidden">
             <h3 class="text-3xl font-bold text-center pb-10">Sign up</h3>
 
-              <form action="/">
+              <form action="" method="post" role="form" class="">
+                {% csrf_token %}
 
                 <div class="flex flex-row items-center justify-between">
-                    <input type="text" placeholder="First Name" class="w-[100%] mr-3 p-3 outline-none bg-transparent border-b-[1px]">
-                    <input type="text" placeholder="Last Name" class="w-[100%] mr-3 p-3 outline-none bg-transparent border-b-[1px]">
-                    <input type="text" name="" placeholder="Email/Phone" class="w-[100%] p-3 outline-none bg-transparent border-b-[1px]">
+                    <input type="text" name="firstname" placeholder="First Name" class="w-[100%] mr-3 p-3 outline-none bg-transparent border-b-[1px]">
+                    <input type="text" name="lastname" placeholder="Last Name" class="w-[100%] mr-3 p-3 outline-none bg-transparent border-b-[1px]">
+                    <input type="text" name="phonenumber" placeholder="Phone" class="w-[100%] p-3 outline-none bg-transparent border-b-[1px]">
 
                 </div>
 
@@ -115,22 +116,22 @@
                 <!-- dd/mm/yyyy -->
 
                 <div class="flex flex-row justify-between items-center mt-5">
-                    <input type="date" name="" class="w-[100%] mr-5 p-2 bg-transparent text-gray-400 outline-none" />
-                    <select name="" class="w-[100%] p-2 bg-transparent text-gray-400 outline-none mr-5">
+                    <input type="date" name="dob" class="w-[100%] mr-5 p-2 bg-transparent text-gray-400 outline-none" />
+                    <select gender="gender" class="w-[100%] p-2 bg-transparent text-gray-400 outline-none mr-5">
                         <option value="">Select Your Gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                         <option value="custom">Custom</option>
                     </select>
 
-                    <select name="" class="w-[100%] p-2 bg-transparent text-gray-400 outline-none mr-5">
+                    <select name="occupation" class="w-[100%] p-2 bg-transparent text-gray-400 outline-none mr-5">
                         <option value="">Occupation</option>
                         <option value="male">Student</option>
                         <option value="female">Job Holders</option>
                         <option value="custom">Others</option>
                     </select>
 
-                    <select name="" class="w-[100%] p-2 bg-transparent text-gray-400 outline-none">
+                    <select name="address" class="w-[100%] p-2 bg-transparent text-gray-400 outline-none">
                         <option value="barishal">Barishal</option>
                     </select>
                 </div>
@@ -138,8 +139,8 @@
                 <div class="mt-8">
                     <label for="" class="block text-xl font-bold text-gray-200">Address</label>
                     <div class="flex flex-row justify-between items-center mt-5">
-                        <input type="text" name="" placeholder="House/Bulding/area" class="w-[100%] mr-5 p-3 text-white bg-transparent outline-none border-b-[1px]">
-                        <input type="text" name="" placeholder="optional - (Address-2)" class="w-[100%] p-3 text-white bg-transparent outline-none border-b-[1px]">
+                        <input type="text" name="locationone" placeholder="House/Bulding/area" class="w-[100%] mr-5 p-3 text-white bg-transparent outline-none border-b-[1px]">
+                        <input type="text" name="locationtwo" placeholder="optional - (Address-2)" class="w-[100%] p-3 text-white bg-transparent outline-none border-b-[1px]">
                     </div>
                 </div>
 
