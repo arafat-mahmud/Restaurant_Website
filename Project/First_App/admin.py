@@ -8,3 +8,9 @@ class AdminContact(admin.ModelAdmin):
 
 
 admin.site.register(Contact, AdminContact)
+
+
+
+
+# user name:  arafat
+# pass: 1234
