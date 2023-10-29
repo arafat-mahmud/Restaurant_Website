@@ -28,6 +28,9 @@ def login(request):
 def signin(request):
     return render(request, 'user_signup.html')
 
+
+#============= Menu ==========#
+
 def menulist(request):
     return render (request,'menu_items.html')
 
@@ -35,5 +38,7 @@ def menu_1_student(request):
     return render(request,"menu_1_student.html")
 def menu_2_job(request):
     return render(request,"menu_2_job.html")
+
+#============= End Menu ==========#
 
 
