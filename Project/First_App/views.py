@@ -37,22 +37,3 @@ def menu_2_job(request):
     return render(request,"menu_2_job.html")
 
 
-
-
-
-
-
-#=========== Contact forms ==========
-
-# def contact(request):
-#     if request.method=="POST":
-#         name=request.POST['name']
-#         email=request.POST['email']
-#         subject=request.POST['subject']
-#         message=request.POST['message']
-#         obj = Contact(name=name,email=email,subject=subject,message=message)
-#         obj.save()
-
-#     return render(request, 'index.html')
-
-#=========== contact forms ==========
