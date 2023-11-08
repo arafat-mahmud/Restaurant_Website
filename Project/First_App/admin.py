@@ -11,6 +11,6 @@ admin.site.register(Contact, AdminContact)
 
 
 
-
+# Admin Password
 # user name:  arafat
 # pass: 1234
