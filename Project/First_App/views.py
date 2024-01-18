@@ -40,5 +40,3 @@ def menu_2_job(request):
     return render(request,"menu_2_job.html")
 
 #============= End Menu ==========#
-
-
